@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "lead";
+    src: url("../assets/Lead.ttf") format("truetype");
+}
+.brand-title {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    // font-family: "lead" !important;
+    color: white;
+    letter-spacing: 0.8px;  
+    background-color: red;
+    font-family: 'Helvetica', sans-serif;
+    // width: 500px;
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    &:hover {
+        color: red !important;
+        background-color: white;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+    };
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}

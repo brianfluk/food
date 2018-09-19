@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+$primary-background: rgb(27, 35, 41);
+$primary-text: #d1d1d1;
+$secondary-background: rgb(20, 20, 20);
+$font-med: 20px;
+
+@mixin test-btn-style {
+    background-color: $primary-background;
+    color: $primary-text;
+    font-size: $font-med;
+    font-family: 'Helvetica', sans-serif;
+}
+
+@font-face {
+    font-family: "nixie";
+    src: url("assets/NixieOne.ttf") format("truetype");
+}
+@font-face {
+    font-family: "lead";
+    src: url("assets/Lead.ttf") format("truetype");
+}
+@font-face {
+    font-family: "znikomit";
+    src: url("assets/Znikomit.otf") format("opentype");
+}
+
+.testing-btn {
+    @include test-btn-style;
+    padding: 0px 20px 0px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "nixie";
+    &:hover {
+        color: white;
+        background-color: rgb(0, 0, 0);
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.testing-header {
+    // font-weight: bold;
+    // font-style: italic;
+    font-size: 32px;
+    padding: 32px;
+    // background-color: $primary-background;
+    // text-decoration: underline;
+    text-align: center;
+    // color: $primary-text;
+    color: white;
+    // font-family: 'Helvetica', sans-serif;
+    
+}
+
+.testing-subheader {
+    // font-weight: bold;
+    // font-style: italic;
+    font-size: 26px;
+    color: white;
+    // font-family: 'Helvetica', sans-serif;
+}
+
+.testing-bg {
+    background-color: $primary-background;
+}
+
+.secondary-bg {
+    background-color: $secondary-background;
+}
+
+.testing-theme {
+    color: $primary-text;
+    font-family: "nixie", sans-serif;
+}
+
+html {
+    background-color: $secondary-background;
+}
