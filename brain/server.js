@@ -1,30 +1,42 @@
 const express        = require('express');
 var router           = express.Router();
-var mongoose         = require('mongoose');
+const mongoose       = require('mongoose');
 
 const assert         = require('assert');
 const bodyParser     = require('body-parser');
 
 const app            = express();
 
-// Change for environment
+// ===== Change for environment =====
 const port = 8000;
 const url = 'mongodb://localhost:27017';
-const dbName = 'myproject';
-
+const mongooseUrl = 'mongodb://localhost:27017/test';
+// ==================================
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-
-
-// mongoose.connect('mongodb://localhost/test');
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect(mongooseUrl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  // we're connected!
-  console.log("hhi. COnnected to db")
+    // Connected to database
+    console.log("hhi. COnnected to db");
+
+    // listen to port
+    require('./routes/routes.js')(app, db);
+    app.listen(port, () => {
+        console.log('We are live on ' + port);
+    });   
+
 });
 
+
+// BELOW ARE JUST SOME NOTES ON HOW TO INTERACT WITH MONGODB THRU MONGOOSE
 
 /** EXAMPLE: creating the schema/ model in server.js  */
 // var kittySchema = new mongoose.Schema({
@@ -65,7 +77,6 @@ db.once('open', function() {
 
 
 /** EXAMPLE: importing the model  */
-// var Product = require('../models/Product.js');
-var Product = require('./models/Product.js');
+// var Product = require('./models/Product.js');
 
 // Product.find() etc like above

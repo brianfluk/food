@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './components/survey/survey.component';
@@ -31,7 +32,8 @@ import { RegisterComponent } from './components/register/register.component';
     AngularFireModule.initializeApp(environment.firebase, 'review-system'),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
