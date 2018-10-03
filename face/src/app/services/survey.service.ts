@@ -17,29 +17,7 @@ export class SurveyService {
   }
 
   getSurveyName() {
-    return this.http.post<any>(this.url + "/surveyname", JSON.stringify({"a": "hi server. this is survey.service.ts"}))
-    // .subscribe(res => {
-    //   console.log(res);
-    //   return res;
-    // })
-    // return this.http.post<any>(this.url + "/surveyname", "");
-
-
-    // fetch(this.url + "/surveyname", {
-    //   method: 'post',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({"a": "hi server. this is survey.service.ts"})
-    // }).then(function(response) {
-    //   response.json()
-    //   .then((body) => {
-    //     console.log("getSurveyName()",body);
-    //     return body;
-    //   })
-    // })
-
+    return this.http.post<any>(this.url + "/surveyname", {"a": "hi server. this is survey.service.ts"})
   }
 
   /*===== for admin use in the backend interface =====*/

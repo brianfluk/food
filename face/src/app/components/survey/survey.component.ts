@@ -21,6 +21,7 @@ export class SurveyComponent implements OnInit {
       res => {
         this.surveyName = res.name;
         // console.log(res);
+        console.log("this.surveyName", this.surveyName);
       }
     );
   }

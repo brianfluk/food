@@ -5,9 +5,11 @@ Angular, Express, MongoDB (i.e. MEAN)
 
 ### Shortcut commands to start up
 1. mongo start up  (from /memory folder) `mongod --dbpath ./memory/data/db`
-2. mongo shell for interacting startup (from a separate terminal any folder) `mongo --host 127.0.0.1:27017`
-3. (/brain) `npm run dev`
-4. (/face) `npm start`
+2. (/brain) `npm run dev`
+3. (/face) `npm start`
+
+4. mongo shell for interacting startup (from a separate terminal any folder) `mongo --host 127.0.0.1:27017`
+
 
 ### Backend guide:
 https://medium.freecodecamp.org/building-a-simple-node-js-api-in-under-30-minutes-a07ea9e390d2 
