@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 $primary-background: rgb(27, 35, 41);
+$primary-background-a: rgba(27, 35, 41, 0.75);
 $primary-text: #d1d1d1;
 $secondary-background: rgb(20, 20, 20);
+$pink: #ce9595;
 $font-med: 20px;
+$primary-font: "Barlow";
 
 @mixin test-btn-style {
     background-color: $primary-background;
@@ -10,7 +13,8 @@ $font-med: 20px;
     font-size: $font-med;
     font-family: 'Helvetica', sans-serif;
 }
-
+// @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Barlow');
 @font-face {
     font-family: "nixie";
     src: url("assets/NixieOne.ttf") format("truetype");
@@ -29,7 +33,7 @@ $font-med: 20px;
     padding: 0px 20px 0px 20px;
     display: inline-block;
     font-size: 14px;
-    font-family: "nixie";
+    font-family: $primary-font;
     &:hover {
         color: white;
         background-color: rgb(0, 0, 0);
@@ -77,13 +81,17 @@ body {
     background-color: $primary-background;
 }
 
+.testing-navbar-bg {
+    background-color: $primary-background-a;
+}
+
 .secondary-bg {
     background-color: $secondary-background;
 }
 
 .testing-theme {
     color: $primary-text;
-    font-family: "nixie", sans-serif;
+    font-family: $primary-font, sans-serif;
 }
 
 html {

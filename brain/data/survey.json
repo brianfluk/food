@@ -1,0 +1,53 @@
+[
+    {
+        "question": "What ethnicity are you?",
+        "type": "select",
+        "options": [
+            "White",
+            "Black",
+            "Hispanic",
+            "Chinese",
+            "Korean",
+            "Japanese",
+            "South East Asian",
+            "South Asian",
+            "Middle Eastern",
+            "Prefer not to specify"
+        ]
+    },
+    {
+        "question": "What do you care most about in your food?",
+        "type": "checkbox",
+        "checkbox options": ["min 1", "max 3"],
+        "options": [
+            "Price",
+            "Waiting time",
+            "Distance",
+            "Taste",
+            "Organic"
+        ]
+    },
+    {
+        "question": "Do you know your personality type?",
+        "type": "select",
+        "options": [
+            "I don't know",
+            "ISTJ, Introverted, Sensing, Thinking, Judging",
+            "ISFJ, Introverted, Sensing, Feeling, Judging",
+            "INFJ, Introverted, Intuitive, Feeling, Judging",
+            "INTJ, Introverted, Intuitive, Thinking Judging",
+            "ISTP, Introverted, Sensing, Thinking, Perceiving",
+            "ISFP, Introverted, Sensing, Feeling, Perceiving",
+            "INFP, Introverted, Intuitive, Feeling, Perceiving",
+            "INTP, Introverted, Intuitive, Thinking, Perceiving",
+            "ESTP, Extraverted, Sensing, Thinking, Perceiving",
+            "ESFP, Extraverted, Sensing, Feeling, Perceiving",
+            "ENFP, Extraverted, Intuitive, Feeling, Perceiving",
+            "ENTP, Extraverted, Intuitive, Thinking, Perceiving",
+            "ESTJ, Extraverted, Sensing, Thinking, Judging",
+            "ESFJ, Extraverted, Sensing, Feeling, Judging",
+            "ENFJ, Extraverted, Intuitive, Feeling, Judging",
+            "ENTJ, Extraverted, Intuitive, Thinking, Judging"
+        ]
+    }
+]

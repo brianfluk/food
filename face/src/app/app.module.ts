@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './components/survey/survey.component';
@@ -15,6 +16,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SrsComponent } from './components/srs/srs.component';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { RegisterComponent } from './components/register/register.component';
     SearchComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SrsComponent,
+    SanitizeHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { RegisterComponent } from './components/register/register.component';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

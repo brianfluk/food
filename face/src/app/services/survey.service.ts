@@ -13,14 +13,14 @@ export class SurveyService {
 
   /** not yet implemented in backend. Will return an Observable */
   getQuestions(): Observable<any> {
-    return this.http.get<any>(this.url);
+    return this.http.get<any>(this.url + "/surveyq");
   }
 
   getSurveyName() {
     return this.http.post<any>(this.url + "/surveyname", {"a": "hi server. this is survey.service.ts"})
   }
 
-  /*===== for admin use in the backend interface =====*/
+  /*===== for admin use in the backend/admin interface =====*/
   addQuestion(surveyName, question) {
   }
 

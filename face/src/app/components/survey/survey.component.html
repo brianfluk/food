@@ -4,42 +4,24 @@
   </div>
 </div>
 
-<button (click)="ngOnInit()">ngOnInit()</button>
+<!-- <button (click)="getSurveyName()">getSurveyName()</button> -->
+<!-- <button (click)="getQuestions()">getQuestions()</button> -->
 
-<form>  
-  <div class="row">
-    <label>
-      What ethnicity do you feel most connected with? <br>
-      <select class="form-control" id="q1">
-          <option selected disabled hidden>--</option>
-          <option>White</option>
-          <option>Black</option>
-          <option>Hispanic</option>
-          <option>Chinese</option>
-          <option>Korean</option>
-          <option>Japanese</option>
-          <option>South East Asian</option>
-          <option>South Asian</option>
-          <option>Middle Eastern</option>
-          <option>Prefer not to specify</option>
-      </select>
-    </label>
+<!-- <div class="row">
+  <h2 class="testing-subheader">Survey Name: {{ this.surveyName }}</h2>
+</div>  -->
+<div class="row">
+  <h2 class="testing-subheader">Question {{this.index + 1}} / {{this.questions.length}}</h2> 
+</div>
+<div class="row">
+  <p>{{ this.questions[this.index].question }}</p>
+</div>
+<div class="row mb-1">
+    <span [innerHTML]="this.questionBody | sanitizeHtml"></span>
+</div>
+<div class="row">
+  <div class="btn-toolbar">
+    <button (click)="nextQuestion(-1)" type="button" [disabled]="this.index - 1 == -1" class="btn btn-dark mr-1">Back</button> 
+    <button (click)="nextQuestion(1)" type="button" class="btn btn-dark mx-1">Next</button>
   </div>
-
-  
-  <div class="row">
-    <label>
-      What's your personality
-      <select class="form-control" id="q2">
-        <option selected disabled hidden>--</option>
-        <option>Cool</option>
-        <option>Lame</option>
-        <option>I'm rekt</option>
-      </select>
-    </label>
-  </div>
-
-  <div class="row">
-    <button>Next</button>
-  </div>
-</form>
+</div>
