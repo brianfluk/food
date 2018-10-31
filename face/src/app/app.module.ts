@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SrsComponent } from './components/srs/srs.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SanitizeHtmlPipe } from './sanitize-html.pipe';
     LoginComponent,
     RegisterComponent,
     SrsComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

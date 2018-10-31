@@ -1,17 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
 $primary-background: rgb(27, 35, 41);
-$primary-background-a: rgba(27, 35, 41, 0.75);
+$primary-background-a: rgb(252, 237, 206);
 $primary-text: #d1d1d1;
 $secondary-background: rgb(20, 20, 20);
-$pink: #ce9595;
-$font-med: 20px;
+/* fix these colors -- i just set it so i can see difference*/
+$btn-color: rgb(252, 237, 206);
+$btn-color-text: rgb(109, 53, 53);
+$btn-hover-color: rgb(202, 181, 138);
+$btn-hover-color-text: rgb(126, 115, 93);
+$btn-glow-color: rgba(34,345,34,0.5);
 $primary-font: "Barlow";
 
+$pink: #ce9595;
+$font-med: 20px;
+
 @mixin test-btn-style {
-    background-color: $primary-background;
-    color: $primary-text;
-    font-size: $font-med;
-    font-family: 'Helvetica', sans-serif;
+    background-color: $btn-color;
+    color: $btn-color-text;
 }
 // @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Barlow');
@@ -32,49 +36,52 @@ $primary-font: "Barlow";
     @include test-btn-style;
     padding: 0px 20px 0px 20px;
     display: inline-block;
-    font-size: 14px;
-    font-family: $primary-font;
-    &:hover {
-        color: white;
-        background-color: rgb(0, 0, 0);
-    }
 }
 
 body {
     background-color: black;
 }
 
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    // box-shadow: 0 0 0pt 2pt $btn-glow-color !important;
+    box-shadow: 2px 0 0px 0px $btn-glow-color, -2px 0 0px 0px $btn-glow-color !important;
+    // background-color: black;
+}
+
+.btn.btn-square {
+    border-radius: 0 !important;
+}
+
 .testing-header {
-    // font-weight: bold;
-    // font-style: italic;
     font-size: 32px;
     padding: 32px;
-    // background-color: $primary-background;
-    // text-decoration: underline;
     text-align: center;
-    // color: $primary-text;
     color: white;
-    // font-family: 'Helvetica', sans-serif;
     
 }
 
 .testing-subheader {
-    // font-weight: bold;
-    // font-style: italic;
     font-size: 26px;
     color: white;
-    // font-family: 'Helvetica', sans-serif;
 }
 
 .testing-navbar {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 0 !important;
     height: 50px;
 }
 .testing-navbar-btn {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
+
+    &:hover {
+        background-color: $btn-hover-color;
+        color: $btn-hover-color-text;
+    }
 }
 
 .testing-bg {
@@ -97,3 +104,4 @@ body {
 html {
     background-color: $secondary-background;
 }
+

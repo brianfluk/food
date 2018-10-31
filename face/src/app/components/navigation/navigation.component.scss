@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "lead";
+    src: url("../../../assets/Lead.ttf") format("truetype");
+}
+// @import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+.brand-title {
+    height: 100%;
+    padding-top: 4px;
+    // font-weight: bold;
+    // font-style: italic;
+    // font-size: 18px;
+    font-size: 32px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.8px;  
+    background-color: red;
+    font-family: 'Anton','Helvetica', sans-serif;
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    &:hover {
+        color: red !important;
+        background-color: white;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+    };
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+
+.brand-large {
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}

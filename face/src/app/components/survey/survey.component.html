@@ -7,18 +7,44 @@
 <!-- <button (click)="getSurveyName()">getSurveyName()</button> -->
 <!-- <button (click)="getQuestions()">getQuestions()</button> -->
 
-<!-- <div class="row">
-  <h2 class="testing-subheader">Survey Name: {{ this.surveyName }}</h2>
-</div>  -->
 <div class="row">
   <h2 class="testing-subheader">Question {{this.index + 1}} / {{this.questions.length}}</h2> 
 </div>
 <div class="row">
   <p>{{ this.questions[this.index].question }}</p>
 </div>
-<div class="row mb-1">
-    <span [innerHTML]="this.questionBody | sanitizeHtml"></span>
+
+<!-- Generating the question body here instead of function in component 
+using NgIf and For statements -->
+<div class="row mb-4">
+  <div *ngIf="this.questions[this.index].type == 'select'">
+    <select class="custom-select">
+      <option selected disabled>- Select an option -</option>
+      <option *ngFor="let opt of questions[this.index].options">{{opt}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="this.questions[this.index].type == 'checkbox'">
+    <div *ngFor="let opt of questions[this.index].options" class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" value="opt">
+        {{opt}}
+      </label>
+    </div>
+  </div>
+
+  <div *ngIf="this.questions[this.index].type == 'mc'">
+    <div class="custom-control custom-radio" *ngFor="let opt of questions[this.index].options">
+      <input type="radio" id="opt_{{opt}}" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="opt_{{opt}}">{{opt}}</label>
+    </div>
+  </div>
 </div>
+
+<!-- Example of injecting html through innerHTML and pipe -->
+<!-- <div class="row mb-1">
+    <span [innerHTML]="this.questionBody | sanitizeHtml"></span>
+</div> -->
 <div class="row">
   <div class="btn-toolbar">
     <button (click)="nextQuestion(-1)" type="button" [disabled]="this.index - 1 == -1" class="btn btn-dark mr-1">Back</button> 

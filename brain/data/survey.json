@@ -3,15 +3,14 @@
         "question": "What ethnicity are you?",
         "type": "select",
         "options": [
-            "White",
-            "Black",
-            "Hispanic",
             "Chinese",
-            "Korean",
             "Japanese",
+            "Korean",
             "South East Asian",
-            "South Asian",
-            "Middle Eastern",
+            "White",
+            "Hispanic",
+            "Brown",
+            "Black",
             "Prefer not to specify"
         ]
     },
@@ -48,6 +47,16 @@
             "ESFJ, Extraverted, Sensing, Feeling, Judging",
             "ENFJ, Extraverted, Intuitive, Feeling, Judging",
             "ENTJ, Extraverted, Intuitive, Thinking, Judging"
+        ]
+    },
+    {
+        "question": "Coke or Pepsi",
+        "type": "mc",
+        "options": [
+            "Coke",
+            "Pepsi",
+            "Both",
+            "Neither"
         ]
     }
 ]
