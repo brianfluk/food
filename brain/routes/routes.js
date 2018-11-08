@@ -1,7 +1,7 @@
 module.exports = function(app, db) {
     // crud calls go here
 
-    app.post('/surveyname', (req, res) => {
+    app.post('/surveyname', (req, res) => { // better as a GET ofc, but this route was for testing
         // console.log(req)
         console.log(req.body);
         res.setHeader('Content-Type', 'application/json');
@@ -14,4 +14,10 @@ module.exports = function(app, db) {
         // console.log(questions);
         res.send(questions);
     });
+
+    // POST survey questions
+    // PUT survey questions
+    // DELETE survey questions
+
+    
 };

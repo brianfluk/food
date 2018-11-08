@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from '@angular/forms';
 
+import { AgGridModule } from 'ag-grid-angular';
+
 import { AppComponent } from './app.component';
 import { SurveyComponent } from './components/survey/survey.component';
 import { SearchComponent } from './components/search/search.component';
@@ -19,6 +21,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SrsComponent } from './components/srs/srs.component';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { AiComponent } from './components/ai/ai.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     RegisterComponent,
     SrsComponent,
     SanitizeHtmlPipe,
-    NavigationComponent
+    NavigationComponent,
+    AiComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     AngularFireStorageModule,
     AngularFireAuthModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
