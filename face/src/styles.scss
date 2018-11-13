@@ -8,11 +8,11 @@ $primary-font: "Barlow";
 
 /* Mixins*/
 @mixin primary-bg-mixin {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), $primary-bg-img !important;
+    background: linear-gradient(rgba(0,30,50,.7), rgba(0,10,90,.7)), $primary-bg-img !important;
     background-color: $primary-bg-color; // backup
     // background-image: $primary-bg-img; // backup
     background-size: 100% 200%;
-    background-attachment: fixed;
+    background-attachment: fixed !important;
 }
 
 /* Font imports */
@@ -58,6 +58,7 @@ $primary-font: "Barlow";
 .universal-style {
     color: $primary-text;
     font-family: $primary-font, sans-serif;
+    height: 200vh; // this isn't the most elegant solution to the bg height problem tho
 }
 
 /* Essentials */

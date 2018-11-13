@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow');
 
 $brand-bg-img: url('src/app/images/blackgeo.png');
+$brand-hover-text-color: rgb(235, 190, 95);
 $brand-font: 'Barlow';
 
 $btn-hover-color-bg: rgb(202, 181, 138);
 $btn-hover-color-text: rgb(126, 115, 93);
-$navbar-bg: rgb(252, 237, 206); // the navbar bg (exclude buttons)
+$navbar-bg: rgba(28, 32, 37, 0.8); // the navbar bg (exclude buttons)
 
-$btn-color: rgb(252, 237, 206);
-$btn-color-text: rgb(109, 53, 53);
+// $btn-color: rgb(252, 237, 206);
+$btn-color: transparent;
+$btn-color-text: white;
 $btn-primary-font: 'Barlow';
 
 .brand-title {
@@ -19,13 +21,12 @@ $btn-primary-font: 'Barlow';
     color: white;
     letter-spacing: 0.8px;  
     background-image: $brand-bg-img;
-    background-color: red;
     font-family: $brand-font,'Helvetica', sans-serif;
     display: inline-block;
     padding-right: 20px;
     padding-left: 20px;
     &:hover {
-        color: red !important;
+        color: $brand-hover-text-color !important;
         background-color: white;
         transition-duration: 0.1s;
         transition-timing-function: ease-in-out;
@@ -58,15 +59,11 @@ $btn-primary-font: 'Barlow';
     }
 }
 
-.testing-navbar-bg {
+.navbar-bg-style {
     background-color: $navbar-bg;
 }
 
-.active {
-    background:#4FA9DC; color:black;
- }
-
- .navbar-btn-style {
+.navbar-btn-style {
     background-color: $btn-color;
     color: $btn-color-text;
     font-family: $btn-primary-font;
