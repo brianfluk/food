@@ -1,25 +1,21 @@
-@import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-balham.css"; // this is one of the available grid themes
-
-$primary-background: rgb(27, 35, 41);
-$primary-background-a: rgb(252, 237, 206);
+/* Quick change variables */
 $primary-text: #d1d1d1;
-$secondary-background: rgb(20, 20, 20);
-/* fix these colors -- i just set it so i can see difference*/
-$btn-color: rgb(252, 237, 206);
-$btn-color-text: rgb(109, 53, 53);
-$btn-hover-color: rgb(202, 181, 138);
-$btn-hover-color-text: rgb(126, 115, 93);
+$primary-bg-color: rgb(20, 20, 20); // actual bg color
+$primary-bg-img: url('src/app/images/blackcity.jpg'); // actual bg img
+
 $btn-glow-color: rgba(34,345,34,0.5);
 $primary-font: "Barlow";
 
-$pink: #ce9595;
-$font-med: 20px;
-
-@mixin test-btn-style {
-    background-color: $btn-color;
-    color: $btn-color-text;
+/* Mixins*/
+@mixin primary-bg-mixin {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), $primary-bg-img !important;
+    background-color: $primary-bg-color; // backup
+    // background-image: $primary-bg-img; // backup
+    background-size: 100% 200%;
+    background-attachment: fixed;
 }
+
+/* Font imports */
 // @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Barlow');
 @font-face {
@@ -35,29 +31,13 @@ $font-med: 20px;
     src: url("assets/Znikomit.otf") format("opentype");
 }
 
-.testing-btn {
-    @include test-btn-style;
-    padding: 0px 20px 0px 20px;
-    display: inline-block;
-}
-
-body {
-    background-color: black;
-}
-
-.btn:focus, .btn:active {
-    outline: none !important;
-    box-shadow: none !important;
-    // box-shadow: 0 0 0pt 2pt $btn-glow-color !important;
-    box-shadow: 2px 0 0px 0px $btn-glow-color, -2px 0 0px 0px $btn-glow-color !important;
-    // background-color: black;
-}
-
+/* Common button properties */
 .btn.btn-square {
     border-radius: 0 !important;
 }
 
-.testing-header {
+/* Main text styles */
+.h1-style {
     font-size: 32px;
     padding: 32px;
     text-align: center;
@@ -65,46 +45,42 @@ body {
     
 }
 
-.testing-subheader {
+.h2-style {
     font-size: 26px;
     color: white;
 }
 
-.testing-navbar {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-left: 0 !important;
-    height: 50px;
-}
-.testing-navbar-btn {
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 50px;
-
-    &:hover {
-        background-color: $btn-hover-color;
-        color: $btn-hover-color-text;
-    }
+/* General styles */
+.primary-bg {
+    @include primary-bg-mixin;
 }
 
-.testing-bg {
-    background-color: $primary-background;
-}
-
-.testing-navbar-bg {
-    background-color: $primary-background-a;
-}
-
-.secondary-bg {
-    background-color: $secondary-background;
-}
-
-.testing-theme {
+.universal-style {
     color: $primary-text;
     font-family: $primary-font, sans-serif;
 }
 
+/* Essentials */
 html {
-    background-color: $secondary-background;
+    background-color: $primary-bg-color !important;
+}
+body {
+    background-color: black;
 }
 
+
+/* Ag-Grid styles -- note they must go before the import */
+$ag-icons-path: "../node_modules/ag-grid-community/src/styles/icons/";
+
+$odd-row-background-color:rgb(73, 73, 73);
+$background-color: rgb(68, 68, 68);
+$range-selection-background-color: rgb(156, 86, 86);
+$ag-range-selected-color-1: rgb(156, 86, 86);
+$hover-color: rgb(241, 103, 103);
+$border-color: transparent;
+$header-background-color: black;
+$foreground-color: white;
+$icon-color: white;
+
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham.scss"; // one of the available themes

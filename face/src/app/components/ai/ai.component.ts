@@ -4,7 +4,7 @@ import * as tf from '@tensorflow/tfjs';
 @Component({
   selector: 'app-ai',
   templateUrl: './ai.component.html',
-  styleUrls: ['./ai.component.css']
+  styleUrls: ['./ai.component.scss']
 })
 export class AiComponent implements OnInit {
 

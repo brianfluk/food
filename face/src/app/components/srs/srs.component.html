@@ -1,10 +1,13 @@
 <h1 class="page-header">wELCOME TO THE GRETEST PAGE EVER</h1>
 <ag-grid-angular 
+    #agGrid
     style="width: 500px; height: 500px;" 
     class="ag-theme-balham"
-    [rowData]="rowData" 
+    [rowData]="rowData | async" 
     [columnDefs]="columnDefs"
     [enableSorting]="true"
     [enableFilter]="true"
+    rowSelection="multiple"
     >
 </ag-grid-angular>
+<button class="btn btn-dark" (click)="getSelectedRows()">Get Selected Rows</button>

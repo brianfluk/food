@@ -27,8 +27,9 @@ db.once('open', function() {
     // Connected to database
     console.log("hhi. COnnected to db");
 
+    require('./routes/routes.js')(app, db); // decouple the routes
+    
     // listen to port
-    require('./routes/routes.js')(app, db);
     app.listen(port, () => {
         console.log('We are live on ' + port);
     });   
