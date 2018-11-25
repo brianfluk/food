@@ -6,6 +6,7 @@ $primary-bg-img: url('src/app/images/blackcity.jpg'); // actual bg img
 $btn-glow-color: rgba(34,345,34,0.5);
 $primary-font: "Barlow";
 
+
 /* Mixins*/
 @mixin primary-bg-mixin {
     background: linear-gradient(rgba(0,30,50,.7), rgba(0,10,90,.7)), $primary-bg-img !important;

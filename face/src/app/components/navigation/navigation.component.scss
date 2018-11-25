@@ -78,3 +78,35 @@ $btn-primary-font: 'Barlow';
     // box-shadow: 2px 0 0px 0px $btn-glow-color, -2px 0 0px 0px $btn-glow-color !important;
     // background-color: black;
 }
+
+
+/* Frosted Glass Effect */
+// main {
+//     height: 100%;
+//     background: url(https://images.pexels.com/photos/314380/pexels-photo-314380.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) fixed no-repeat;
+//     background-size: cover;
+//     padding-top: 4rem;
+// }
+// .frosted-glass {
+//     // width: 400px;
+//     // height: 200px;
+//     background: inherit;
+//     position: relative;
+//     z-index: 20;
+//     overflow: hidden;
+//     margin: 0 auto;
+//     padding: 2rem;
+//     box-sizing: border-box;
+//     box-shadow: 0 .5em 1em rgba(0,0,0,.3);
+// }
+  
+// .frosted-glass::before {
+//     content: "";
+//     position: absolute;
+//     z-index: 10;
+//     top: 0; right: 0; bottom: 0; left: 0;
+//     background: inherit;
+//     box-shadow: inset 0 0 3000px rgba(255,255,255,.5);
+//     filter: blur(10px);
+//     margin: -20px;
+// }
