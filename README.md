@@ -6,6 +6,7 @@ This is a full-stack project that serves the following purposes:
 * Refresh my memory on all the different aspects of a project
 * Track my progress as well as the various techniques that I use
 * Attempt to solve some kind of real-life problem -- in this case, the problem of seeking relevant reviews
+* Serve as a playground for experimentation
 
 ## Tech stack: 
 Angular, Express, MongoDB (i.e. MEAN)
