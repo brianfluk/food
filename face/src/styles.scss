@@ -59,6 +59,7 @@ $primary-font: "Barlow";
 .universal-style {
     color: $primary-text;
     font-family: $primary-font, sans-serif;
+    font-size: 16px;
     height: 200vh; // this isn't the most elegant solution to the bg height problem tho
 }
 

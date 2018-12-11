@@ -11,6 +11,8 @@ This is a full-stack project that serves the following purposes:
 ## Tech stack: 
 Angular, Express, MongoDB (i.e. MEAN)
 
+note: the Angular front-end requires python(2.7) for some stuff i.e. tensorflow
+
 ## Shortcut commands to start up
 1. mongo start up  (from /memory folder) `mongod --dbpath ./memory/data/db`
 2. (/brain) `npm run dev`
